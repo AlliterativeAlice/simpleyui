@@ -115,12 +115,8 @@ namespace SimpleYUI
                         jsCompressor.ObfuscateJavascript = Obfuscate;
                         jsCompressor.PreserveAllSemicolons = PreserveSemicolons;
                     }
-                    foreach (string file in files)
-                    {
-                        string fileContents = File.ReadAllText(file);
-                        fileContents = (Type == BundleType.CSS ? cssCompressor.Compress(fileContents) : jsCompressor.Compress(fileContents));
-                        totalContents += fileContents + "\n";
-                    }
+                    foreach (string file in files) totalContents += File.ReadAllText(file) + "\n";
+                    totalContents = (Type == BundleType.CSS ? cssCompressor.Compress(totalContents) : jsCompressor.Compress(totalContents));
                     File.WriteAllText(fileOnSystem, totalContents);
                 }
                 return MakeTag(outputWebPath) + "\r\n";
