@@ -36,7 +36,7 @@ An example of using SimpleYUI is:
 </html>
 ```
 
-SimpleYUI injects a hash into the rendered filename based on the parameters passed and the last modified times of the included files. Therefore SimpleYUI will not regenerate the combined file on every request (which would be extremely inefficient) but only when one of the included files is changed, or the parameters passed to CSS() or JavaScript() change. When debugging, you can have SimpleYUI output individual <script>/<link> tags for each file instead of the combined file by including debug=true in the request query string (e.g. http://www.example.com/index.aspx?debug=true) or setting the "debug" parameter, which is the first parameter of the `CSS()` and `JavaScript()` methods to true (e.g. `SimpleYUI.Bundler.CSS(true)`)
+SimpleYUI injects a hash into the rendered filename based on the parameters passed and the last modified times of the included files. Therefore SimpleYUI will not regenerate the combined file on every request (which would be extremely inefficient) but only when one of the included files is changed, or the parameters passed to CSS() or JavaScript() change. When debugging, you can have SimpleYUI output individual `<script>`/`<link>` tags for each file instead of the combined file by including debug=true in the request query string (e.g. http://www.example.com/index.aspx?debug=true) or setting the "debug" parameter, which is the first parameter of the `CSS()` and `JavaScript()` methods to true (e.g. `SimpleYUI.Bundler.CSS(true)`)
 
 Note that relative paths in CSS files will not be converted to work in the combined CSS file, so you may need to use absolute paths unless the combined CSS file is going to be outputted to the same directory as the CSS file(s) containing relative paths.
 
@@ -64,7 +64,7 @@ Roughly how many characters should be included per line in the compressed CSS fi
 
 ##### debug (bool)
 
-If set to true, no combining/compression will take place and <script> tags to each individual JS file will be output. If no parameter is passed to debug, it's possible to trigger debug mode by adding debug=true to the request query string.
+If set to true, no combining/compression will take place and `<script>` tags to each individual JS file will be output. If no parameter is passed to debug, it is possible to trigger debug mode by adding debug=true to the request query string.
 
 ##### useCompression (bool)
 
