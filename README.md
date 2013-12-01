@@ -1,5 +1,7 @@
 # Simple YUI Compressor .NET
 
+Binary Downloads: https://github.com/AlliterativeAlice/simpleyui/releases
+
 ## Introduction
 
 Simple YUI Compressor .NET is a .NET 2.0-compatible library for combining and minifying JavaScript and CSS files for display on websites. Usage of SimpleYUI is similar to [SquishIt](https://github.com/jetheredge/SquishIt). SimpleYUI is not intended to be a replacement to SquishIt, but rather is intended to provide a simpler, less feature-rich solution that's compatible with .NET 2.0 and up. "Simple" in this case means:
